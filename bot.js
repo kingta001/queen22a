@@ -7,7 +7,7 @@ const client = new Discord.Client();
  
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setGame(`Queen , | ♦ Free Nitro •`,'https://www.twitch.tv/zya2d_')
+    client.user.setGame(`♦ Free Nitro •`,'https://www.twitch.tv/zya2d_')
     client.user.setStatus('ldle');
 });
 
@@ -21,7 +21,7 @@ client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
     
-if (message.content.startsWith(adminprefix + 'setname')) {
+if (message.content.startsWith(adminprefix + 'setgame')) {
   client.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
 } else 
